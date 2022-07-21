@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { shade } from 'polished';
+import { darken, lighten, shade } from 'polished';
 
 export const Container = styled.button`
   margin: 30px 15px;
@@ -14,6 +14,7 @@ export const Container = styled.button`
   font-weight: bold;
   cursor: pointer;
   border: 0;
+  transition: background 0.02s;
 
   @media (max-width: 400px) {
     width: 150px;
@@ -25,5 +26,11 @@ export const Container = styled.button`
 
   &:hover {
     background: ${shade(0.2, '#fca311')};
+  }
+
+  &:disabled {
+    background: ${darken(0.2, '#fca311')};
+    color: ${lighten(0.2, '#000000')};
+    cursor: default;
   }
 `;

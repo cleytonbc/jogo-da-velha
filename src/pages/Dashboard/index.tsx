@@ -20,7 +20,7 @@ export function Dashboard () {
       <Main>
         <Game  />
           <Buttons>
-            {!start && <Button onClick={() => setStart(true)}>Iniciar</Button> }
+            <Button onClick={() => setStart(true)} disabled={start}>Iniciar</Button> 
             
           </Buttons>
           <footer>
