@@ -93,8 +93,9 @@ return false;
         })}
 
       </Table>
-      {!win && <div> {!end && <>É a vez do  {player1 ? "Jogador 1 ( X )" : "Jogador 2 ( O )"} selecionar um quadro</>}</div>} 
-      {end && <div>Clique em iniciar para uma nova partida</div>} 
+        {!start && <>{!end && <div>Clique em iniciar para começar uma partida</div>}</>}
+        {start && <>{!win && <div> {!end && <>É a vez do  {player1 ? "Jogador 1 ( X )" : "Jogador 2 ( O )"} selecionar um quadro</>}</div>} </>}
+        {end && <div>Clique em iniciar para uma nova partida</div>} 
       
     </Container>
   )

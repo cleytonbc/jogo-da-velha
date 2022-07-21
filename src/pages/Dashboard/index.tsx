@@ -1,5 +1,5 @@
 import { setSaturation } from "polished";
-import { useContext, useState } from "react";
+import { ButtonHTMLAttributes, useContext, useState } from "react";
 import { Button } from "../../components/Button";
 import { Footer } from "../../components/Footer";
 import { Game } from "../../components/Game";
